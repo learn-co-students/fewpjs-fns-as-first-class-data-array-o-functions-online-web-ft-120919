@@ -36,11 +36,14 @@ function unleashDog(dogName, dogBreed) {
     walkHome,
     unleashDog]
 
-function exerciseDog(dogName, dogBreed) {
-    let array = []
-    routine.forEach(f => {
-        array.push(f(dogName, dogBreed))
-    });
-    return array
-}
+// function exerciseDog(dogName, dogBreed) {
+//     let array = []
+//     routine.forEach(f => {
+//         array.push(f(dogName, dogBreed))
+//     });
+//     return array
+// }
 
+function exerciseDog(dog, breed) {
+    return routine.map(fn => fn(dog, breed))
+  }
